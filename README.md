@@ -37,8 +37,7 @@ school:
 </p>
 <br>
 <p>
-<button type="submit"><span>submit</span></button>
-<button type="reset"><span>reset</span></button>
+<button type="ADD"><span>Add</span></button>
 </p>
 </body>
 </html>
