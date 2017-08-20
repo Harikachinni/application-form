@@ -43,3 +43,31 @@ school:
 </body>
 </html>
 ?>
+<html>
+<form id="form1" name="form1" method="post" action="<?php echo $PHP_SELF; ?>">
+school List :
+<select sch Name='NEW'>
+<option value="">--- Select ---</option>
+  <?
+  mysql_connect ("localhost","root","");
+  mysql_select_db ("school");
+  $select="school";
+  if (isset ($select)&&$select!=""){
+  $select=$_POST ['NEW'];
+   }
+   ?>
+    <?
+ $list=mysql_query("select * from name order by sch_id asc");
+            while($row_list=mysql_fetch_assoc($list)){
+                ?>
+                    <option value="<? echo $row_list['sch_id']; ?>"<? if($row_list['sch_id']==$select){ echo "selected"; } ?>>
+                                         <?echo $row_list['sch_name'];?>
+                    </option>
+                <?
+                }
+                ?>
+            </select>
+            <input type="submit" name="Submit" value="Select" />
+        </form>
+    </body>
+</html>
