@@ -12,12 +12,6 @@ echo $result;
 </p>
 <br>
 <p>
-<label>password
-</label>
-<input id="password" name="password" type="password" requried="required">
-</p>
-<br>
-<p>
 <label> Email Address
 </label>
 <input id="Email" name="email" type="text" required="required">
