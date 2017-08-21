@@ -31,7 +31,7 @@ school:
 </p>
 <br>
 <p>
-<button type="ADD"><span>Add</span></button>
+<button type="Register"><span>Register</span></button>
 </p>
 </body>
 </html>
