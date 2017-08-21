@@ -9,25 +9,27 @@ mysql_select_db("sch_db",$con) or die('Not Select Database' . mysql_error());
 }
 public function insert_data()
 {
-if (isset($_POST['name']) && isset($_POST['age']) && isset($_POST['name'])) {
-    $name = $_POST['name'];
-    $age = $_POST['age'];
-    $city = $_POST['city'];
-    $qry = "insert into table1 (name,age,city) values('$name',$age,'$city')";
-    $result = mysql_query($qry);
-    if ($result) {
-     return "Insert Data Successfully.";
-    }
-    else
-    {
-     return "Error...! Not Inserted.";
-    }
-   }
-   else
-   {
-    return "";
-   }
-  }
+if (isset($_POST['name']) && isset($_POST['email']) && isset($select)&&$select!="") 
+{
+$name = $_POST['name'];
+$email = $_POST['email'];
+$school=$_POST ['NEW'];    
+$qry = "insert into sch (name,email,school) values('$name',$email,'$school')";
+$result = mysql_query($qry);
+if ($result)
+{
+ return "Insert Data Successfully.";
  }
+ else
+ {
+return "Error...! Not Inserted.";
+}
+}
+else
+{
+return "";
+}
+}
+}
 ?>
 
