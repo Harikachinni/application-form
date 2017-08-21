@@ -1,26 +1,18 @@
 controller
 <?php
-include_once("model/Model.php");
-class Controller 
+include_once("Model/Model.php");
+Class Controller
 {
- public $model;
- public function __construct()  
-    {  
-  $this->model = new Model();
- } 
-  public function invoke()
- {
-   $reslt = $this->model->getADD();     
-  if($reslt == 'ADD')
-  {
-   include 'view/AfterADD.php';
-  }
-  else
-  {
-   include 'view/ADD.php';
-  }
-  
- }
+public $model;
+public function Controller()
+{
+$this->model=new Model();
 }
-
+public function show()
+{
+$result = $this->model->insert_data();
+include 'register/register.php';
+}
+}
 ?>
+
